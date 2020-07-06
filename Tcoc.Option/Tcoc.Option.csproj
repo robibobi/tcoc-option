@@ -5,9 +5,11 @@
     <RootNamespace>Tcoc.OptionType</RootNamespace>
 
     <PackageId>Tcoc.Option</PackageId>
-    <Version>0.0.2.0</Version>
+    <Version>0.0.2.1</Version>
     <Authors>Tobias Hoefer</Authors>
     <Company>TheColorOfCode</Company>
+    <RepositoryUrl>https://github.com/robibobi/tcoc-option.git</RepositoryUrl> 
+    <RepositoryType>git</RepositoryType> 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
