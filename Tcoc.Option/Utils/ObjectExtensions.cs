@@ -1,12 +1,15 @@
 using System;
 
-internal static class ObjectExtensions
+namespace Tcoc.OptionType.Utils
 {
-    public static void AssertNotNull(this object obj, string nameOfArgument)
+    internal static class ObjectExtensions
     {
-        if(obj == null)
+        public static void AssertNotNull(this object obj, string nameOfArgument)
         {
-            throw new ArgumentNullException(nameOfArgument);
+            if (obj == null)
+            {
+                throw new ArgumentNullException(nameOfArgument);
+            }
         }
     }
 }

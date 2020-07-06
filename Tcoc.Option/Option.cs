@@ -1,7 +1,4 @@
-﻿using System;
-using Tcoc.OptionType;
-
-namespace Tcoc.OptionType
+﻿namespace Tcoc.OptionType
 {
     public interface Option<in T>
     {

@@ -1,9 +1,8 @@
 using System;
 using Xunit;
-using Tcoc.OptionType;
 using Shouldly;
 
-namespace Tcoc.Option.UnitTests
+namespace Tcoc.OptionType.UnitTests
 {
     public class OptionTests
     {

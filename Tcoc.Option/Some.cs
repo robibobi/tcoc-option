@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Tcoc.OptionType
+﻿namespace Tcoc.OptionType
 {
     public class Some<T> : Option<T>
     {
@@ -11,6 +7,11 @@ namespace Tcoc.OptionType
         internal Some(T value)
         {
             Value = value;
+        }
+
+        public override string ToString()
+        {
+            return $"Some<{typeof(T).Name}>: {Value}";
         }
     }
 }

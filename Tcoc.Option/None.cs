@@ -9,5 +9,10 @@ namespace Tcoc.OptionType
         internal None()
         {
         }
+
+        public override string ToString()
+        {
+            return $"None<{typeof(T).Name}>";
+        } 
     }
 }
