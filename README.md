@@ -1,5 +1,7 @@
-##Tcoc.Option 
+## Tcoc.Option 
 
 A simple Option-Type implementation for C#.
 
-[![NuGet version (Tcoc.Option)]](https://www.nuget.org/packages/Tcoc.Option/)
+This library is available as NuGet package:
+
+![Nuget](https://img.shields.io/nuget/v/tcoc.option)
