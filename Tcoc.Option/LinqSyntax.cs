@@ -18,15 +18,15 @@ namespace Tcoc.OptionType
             return option.Bind(selector);
         }
 
-        
+
         public static Option<C> SelectMany<A, B, C>(
-          this Option<A> optionA,
-           Func<A, Option<B>> collectionSelector,
-           Func<A, B, C> resultSelector)
+            this Option<A> option,
+            Func<A, Option<B>> selector,
+            Func<A, B, C> resultSelector)
         {
-            return optionA
-                .SelectMany(a => collectionSelector(a)
-                    .Select(b => resultSelector(a, b)));
+            return option
+                .Bind(a => selector(a)
+                    .Map(b => resultSelector(a, b)));
         }
     }
 }
