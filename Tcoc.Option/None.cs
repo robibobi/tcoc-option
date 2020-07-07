@@ -4,12 +4,8 @@ using System.Text;
 
 namespace Tcoc.OptionType
 {
-    public class None<T> : Option<T>
+    public readonly struct None<T> : Option<T>
     {
-        internal None()
-        {
-        }
-
         public override string ToString()
         {
             return $"None<{typeof(T).Name}>";

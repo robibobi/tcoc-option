@@ -1,6 +1,6 @@
 ﻿namespace Tcoc.OptionType
 {
-    public class Some<T> : Option<T>
+    public readonly struct Some<T> : Option<T>
     {
         public T Value { get; }
 

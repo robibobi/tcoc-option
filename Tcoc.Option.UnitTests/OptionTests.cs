@@ -23,7 +23,7 @@ namespace Tcoc.OptionType.UnitTests
 
             var result = Tcoc.OptionType.Option.Some(value);
 
-            (result as Some<int>).Value.ShouldBe(5);
+            ((Some<int>)result).Value.ShouldBe(5);
         }
     }
 }

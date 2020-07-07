@@ -14,7 +14,7 @@ namespace Tcoc.OptionType.UnitTests
             var result = option.Map(nr => nr * 2);
 
             result.ShouldBeOfType<Some<int>>();
-            (result as Some<int>).Value.ShouldBe(10);
+            ((Some<int>)result).Value.ShouldBe(10);
         }
 
         [Fact]
@@ -58,7 +58,7 @@ namespace Tcoc.OptionType.UnitTests
             var stringOption = intOption.Bind(func);
 
             stringOption.ShouldBeOfType<Some<string>>();
-            (stringOption as Some<string>).Value.ShouldBe("This is the meaning of life.");
+            ((Some<string>)stringOption).Value.ShouldBe("This is the meaning of life.");
         }
 
 
