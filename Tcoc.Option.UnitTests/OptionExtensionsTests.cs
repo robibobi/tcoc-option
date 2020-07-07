@@ -186,5 +186,24 @@ namespace Tcoc.OptionType.UnitTests
             Option<int> option = null;
             Should.Throw<ArgumentNullException>(() => option.AsSome());
         }
+
+        [Fact]
+        public void IsSome_OptionIsSome_ReturnsTrue()
+        {
+            Option.Some(42).IsSome().ShouldBeTrue();
+        }
+        
+        [Fact]
+        public void IsSome_OptionIsNone_ReturnsFalse()
+        {
+            Option.None<int>().IsSome().ShouldBeFalse();
+        }
+        
+        [Fact]
+        public void IsSome_OptionIsNull_ThrowsNullArgException()
+        {
+            Option<int> option = null;
+            Should.Throw<ArgumentNullException>(() => option.IsSome());
+        }
     }
 }

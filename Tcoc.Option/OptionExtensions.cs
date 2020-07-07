@@ -79,5 +79,12 @@ namespace Tcoc.OptionType
                 return some;
             throw new ArgumentException("Cannot convert None<> to Some<>.");
         }
+
+        public static bool IsSome<T>(this Option<T> option)
+        {
+            option.AssertNotNull(nameof(option));
+
+            return option is Some<T>;
+        }
     }
 }
