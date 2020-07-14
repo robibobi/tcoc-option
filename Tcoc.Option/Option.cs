@@ -1,4 +1,7 @@
-﻿namespace Tcoc.OptionType
+﻿using System;
+using Tcoc.OptionType.Extensions;
+
+namespace Tcoc.OptionType
 {
     public interface Option<in T>
     {
@@ -22,6 +25,14 @@
                 return None<T>();
             else
                 return Some(value);
+        }
+
+        public static Option<T> FromNullable<T>(Nullable<T> nullableValue) where T : struct
+        {
+            if(nullableValue.HasValue)
+                return Some<T>(nullableValue.Value);
+            else
+                return None<T>();
         }
     }
    

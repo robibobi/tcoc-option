@@ -1,6 +1,6 @@
 using System;
 
-namespace Tcoc.OptionType.Utils
+namespace Tcoc.OptionType.Extensions
 {
     internal static class ObjectExtensions
     {

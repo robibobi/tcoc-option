@@ -1,5 +1,5 @@
 ﻿using System;
-using Tcoc.OptionType.Utils;
+using Tcoc.OptionType.Extensions;
 
 namespace Tcoc.OptionType
 {
