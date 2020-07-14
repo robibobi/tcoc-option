@@ -17,6 +17,13 @@ namespace Tcoc.OptionType.UnitTests
         }
 
         [Fact]
+        public void Some_ValueIsNull_ThrowsArgumentNullException()
+        {
+            Should.Throw<ArgumentNullException>(
+                () => Option.Some<object>(null));
+        }
+
+        [Fact]
         public void None_TypeString_ReturnsNone()
         {
             var result = Option.None<string>();

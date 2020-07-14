@@ -10,7 +10,9 @@ namespace Tcoc.OptionType
     public static class Option
     {
         public static Option<T> Some<T>(T value)
-        {
+        {                
+            value.AssertNotNull(nameof(value));
+            
             return new Some<T>(value);
         }
 

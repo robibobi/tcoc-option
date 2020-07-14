@@ -1,5 +1,4 @@
 using Shouldly;
-using Tcoc.OptionType;
 using Xunit;
 
 namespace Tcoc.OptionType.UnitTests
