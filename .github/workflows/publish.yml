@@ -4,6 +4,14 @@ on:
     branches:
       - master # Default release branch
 jobs:
+  
+  tests:
+    name: Unit Testing
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: dotnet test
+ 
   publish:
     name: build, pack & publish
     runs-on: ubuntu-latest
