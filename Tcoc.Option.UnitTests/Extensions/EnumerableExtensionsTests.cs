@@ -39,5 +39,11 @@ namespace Tcoc.OptionType.UnitTests.Extensions
                 () => enumerable.NoneIfEmpty());
         }
 
+        [Fact]
+        public void Fail()
+        {
+            true.ShouldBe(false);
+        }
+
     }
 }
