@@ -86,5 +86,12 @@ namespace Tcoc.OptionType
 
             return option is Some<T>;
         }
+
+        public static bool IsNone<T>(this Option<T> option)
+        {
+            option.AssertNotNull(nameof(option));
+
+            return option is None<T>;
+        }
     }
 }
